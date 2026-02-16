@@ -11,10 +11,14 @@ import com.example.crypt_droid.states.CryptoItemState
 import com.example.crypt_droid.states.WatchlistState
 import com.example.crypt_droid.utility.formatPrice
 import com.example.crypt_droid.utility.getCoinName
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.conflate
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
+import okhttp3.Dispatcher
 
 class CryptoViewModel : ViewModel() {
     private val repository = CryptoRepository()
@@ -38,7 +42,7 @@ class CryptoViewModel : ViewModel() {
 
     private fun connectSocket() {
         viewModelScope.launch {
-            repository.observeTicker(mySymbols).collect { event ->
+            repository.observeTicker(mySymbols).conflate().flowOn(Dispatchers.Default).collect { event ->
                 when (event) {
                     is SocketEvent.ConnectionChange -> {
                         _watchlistState.value = _watchlistState.value.copy(connectionState = event.state)
