@@ -2,15 +2,11 @@
 
 A real-time cryptocurrency tracking application built with **Modern Android Development** standards. It features live WebSocket updates, dynamic charting, and robust connection handling.
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/46b97dbc-c5a1-455f-9c85-6efb897bf579" width="400" />
-</div>
+## 📱 App Demo & Screenshots
 
-## 📱 Screenshots
-
-| 📉 Live Watchlist | 📊 Real-Time Detail Chart |
-|:---:|:---:|
-| <img width="300" alt="List Screen" src="https://github.com/user-attachments/assets/f6584220-fea2-4549-819d-b8fd2f0c43f4" /> | <img width="300" alt="Detail Screen" src="https://github.com/user-attachments/assets/75ccb82f-2a2e-41cc-a91e-c047437c7b46" /> |
+| 🎥 Live Demo | 📉 Watchlist | 📊 Real-Time Detail Chart |
+|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/5307851c-e810-46cf-97ec-61fb5eab2ebf" width="250" /> | <img src="https://github.com/user-attachments/assets/f6584220-fea2-4549-819d-b8fd2f0c43f4" width="250" /> | <img src="https://github.com/user-attachments/assets/75ccb82f-2a2e-41cc-a91e-c047437c7b46" width="250" /> |
 
 ## 🛠 Tech Stack
 
